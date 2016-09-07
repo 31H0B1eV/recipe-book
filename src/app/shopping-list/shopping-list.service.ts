@@ -2,7 +2,7 @@ import { Ingredient } from "../recipes/shared/ingredient";
 
 export class ShoppingListService {
 
-  private items: Ingredient[];
+  private items: Ingredient[] = [];
 
   constructor() { }
 
