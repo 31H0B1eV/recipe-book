@@ -13,6 +13,7 @@ import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.comp
 import { Dropdown } from './dropdown.directive';
 import { RecipeService } from "./recipes/recipe.service";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { routing, appRoutingProviders } from "./app.routes";
 
 @NgModule({
   declarations: [
@@ -29,12 +30,14 @@ import { ShoppingListService } from "./shopping-list/shopping-list.service";
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
-  providers: [RecipeService, ShoppingListService],
+  providers: [RecipeService, ShoppingListService, appRoutingProviders],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 
 }
