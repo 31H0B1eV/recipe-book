@@ -15,7 +15,7 @@ import { RecipeService } from "./recipes/recipe.service";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { routing, appRoutingProviders } from "./app.routes";
 import { RecipeStartComponent } from './recipes/recipe-start.component';
-import { RecipeEditComponent } from './recipes\recipe-edit/recipe-edit.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
