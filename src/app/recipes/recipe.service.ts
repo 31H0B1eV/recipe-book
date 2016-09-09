@@ -13,6 +13,9 @@ export class RecipeService {
     new Recipe("Summer Salad", "Okayish", "http://thedivinemissmommy.com/wp-content/uploads/2012/07/ALDI-Summer-Salad-Watermelon-Feta-Mango-Raspberry-Dressing-e1341203561130.jpg", [
       new Ingredient('Tomato', 2),
       new Ingredient('Salad', 1)
+    ]),
+    new Recipe("Sushi", "Very Tasty", "http://img.tyt.by/n/afisha/03/a/obshchaya_kartinka_sushi.jpg", [
+      new Ingredient('Fish', 2)
     ])
   ];
 
