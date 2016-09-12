@@ -16,6 +16,10 @@ export class RecipeService {
     ]),
     new Recipe("Sushi", "Very Tasty", "http://img.tyt.by/n/afisha/03/a/obshchaya_kartinka_sushi.jpg", [
       new Ingredient('Fish', 2)
+    ]),
+    new Recipe("Barbecue", "Very Tasty", "http://i2.cdn.turner.com/cnnnext/dam/assets/151110103345-bbq-franklin-austin-texas-super-169.jpg", [
+      new Ingredient('Bow', 1),
+      new Ingredient('Meat', 10)
     ])
   ];
 
@@ -33,4 +37,11 @@ export class RecipeService {
     this.recipes.splice(this.recipes.indexOf(recipe), 1);
   }
 
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+  }
+
+  editRecipe(oldRecipe: Recipe, newRecipe: Recipe) {
+    this.recipes[this.recipes.indexOf(oldRecipe)] = newRecipe;
+  }
 }
