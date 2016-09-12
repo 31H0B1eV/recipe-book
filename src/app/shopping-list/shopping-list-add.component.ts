@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Ingredient } from "../recipes/shared/ingredient";
 import { ShoppingListService } from "./shopping-list.service";
 
@@ -7,14 +7,15 @@ import { ShoppingListService } from "./shopping-list.service";
   templateUrl: 'shopping-list-add.component.html',
   styles: []
 })
-export class ShoppingListAddComponent implements OnInit {
+export class ShoppingListAddComponent implements OnChanges {
 
-  item: Ingredient;
+  @Input() item: Ingredient;
   isAdd = true;
 
   constructor(private sls: ShoppingListService) { }
 
-  ngOnInit() {
+  ngOnChanges(changes): void {
+    this.isAdd = changes.item.currentValue === null;
   }
 
   onSubmit(ingredient: Ingredient) {
